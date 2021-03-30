@@ -1,0 +1,25 @@
+def fib_nac():
+    from IPython.display import clear_output
+    a = 1
+    b = 1
+    count = 1
+    answer  = 'wrong'
+    
+    while answer.isdigit() == False:
+        
+        answer = input("How many steps do you want to see? ")
+        
+        if answer.isdigit() == False:
+            
+            clear_output()
+                
+            print("Sorry, but you did not enter an integer. Please try again.")
+            
+    z = int(answer)
+
+    for x in range(0,z):
+        c = a + b
+        print(f'{count}.  {a} + {b} = {c}')
+        count = count + 1
+        a = b
+        b = c
